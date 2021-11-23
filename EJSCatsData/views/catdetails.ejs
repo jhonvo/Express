@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= cat.catname %> Details</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+    <h1>More about <%= cat.catname %></h1>
+    <p><img src="../<%= cat.image %>"></p>
+    <p><h4>Favorite Food: </h4><%= cat.favoriteFood %></p>
+    <p><h4>Age:</h4><%= cat.age %></p>
+    <p><h4>Sleeping Spots: </h4>
+        <ul>
+        <% for (spot in cat.spots) { %>
+            <li><%= cat.spots[spot] %></li>
+        <% } %>
+        </ul>
+    </p>
+    <p><a href="/cats">See all cats...</a></p>
+
+
+
+
+</body>
+</html>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +10,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    Look at these cats!
-    <p><img src="cat1.jpg"></p>
-    <p><img src="cat2.jpg"></p>
-    <p><img src="cat3.gif"></p>
-    <p><img src="cat4.jpg"></p>
+    <h1>Look at these cats!</h1> 
+
+
+    <% for (let i = 0; i < cats.length; i++){ %>
+        <p><a href="/cats/<%= cats[i].id %>"><img src="<%= cats[i].image %>"></p></a>
+
+    <% } %> 
+    
+
 </body>
 </html>
