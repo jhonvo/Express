@@ -27,7 +27,7 @@ io.on('connection', function(socket){
         // console.log(data);
         socket.emit('updated_message', data );
         let random = Math.floor(Math.random() * 1000);
-        // console.log(random);
+        console.log(random);
         socket.emit('random_number', random);
     })
 });
